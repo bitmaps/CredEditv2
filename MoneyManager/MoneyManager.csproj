@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA538107-249A-455A-A85E-2D9D48498752}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoneyManager</RootNamespace>
+    <AssemblyName>MoneyManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.105.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.105.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assets.Designer.cs">
+      <DependentUpon>assets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetAccounts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetAccounts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetAssets.cs">
+      <DependentUpon>creddataDataSetAssets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetAssets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetAssets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetBudgetDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetBudgetDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetBudgetHeader.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetBudgetHeader.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetCategories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetCategories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetGridSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetGridSettings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetPayeeImport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetPayeeImport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetPayees.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetPayees.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetRepeatSplitTransactions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetRepeatSplitTransactions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetRepeatTransactions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetRepeatTransactions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetRepFilters.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetRepFilters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetSplitTransactions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetSplitTransactions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetSubCategories.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetSubCategories.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetTransactions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetTransactions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetTransFilters.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetTransFilters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creddataDataSetUserSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creddataDataSetUserSettings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="databaseOperations.cs" />
+    <Compile Include="newaccountwizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newaccountwizard.Designer.cs">
+      <DependentUpon>newaccountwizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaction.Designer.cs">
+      <DependentUpon>transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payees.Designer.cs">
+      <DependentUpon>payees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets.resx">
+      <DependentUpon>assets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newaccountwizard.resx">
+      <DependentUpon>newaccountwizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaction.resx">
+      <DependentUpon>transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payees.resx">
+      <DependentUpon>payees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="creddataDataSetAccounts.xsc">
+      <DependentUpon>creddataDataSetAccounts.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetAccounts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetAccounts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetAccounts.xss">
+      <DependentUpon>creddataDataSetAccounts.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetAssets.xsc">
+      <DependentUpon>creddataDataSetAssets.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetAssets.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetAssets.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetAssets.xss">
+      <DependentUpon>creddataDataSetAssets.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetBudgetDetail.xsc">
+      <DependentUpon>creddataDataSetBudgetDetail.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetBudgetDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetBudgetDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetBudgetDetail.xss">
+      <DependentUpon>creddataDataSetBudgetDetail.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetBudgetHeader.xsc">
+      <DependentUpon>creddataDataSetBudgetHeader.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetBudgetHeader.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetBudgetHeader.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetBudgetHeader.xss">
+      <DependentUpon>creddataDataSetBudgetHeader.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetCategories.xsc">
+      <DependentUpon>creddataDataSetCategories.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetCategories.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetCategories.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetCategories.xss">
+      <DependentUpon>creddataDataSetCategories.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetGridSettings.xsc">
+      <DependentUpon>creddataDataSetGridSettings.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetGridSettings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetGridSettings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetGridSettings.xss">
+      <DependentUpon>creddataDataSetGridSettings.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetPayeeImport.xsc">
+      <DependentUpon>creddataDataSetPayeeImport.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetPayeeImport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetPayeeImport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetPayeeImport.xss">
+      <DependentUpon>creddataDataSetPayeeImport.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetPayees.xsc">
+      <DependentUpon>creddataDataSetPayees.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetPayees.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetPayees.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetPayees.xss">
+      <DependentUpon>creddataDataSetPayees.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetRepeatSplitTransactions.xsc">
+      <DependentUpon>creddataDataSetRepeatSplitTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetRepeatSplitTransactions.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetRepeatSplitTransactions.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetRepeatSplitTransactions.xss">
+      <DependentUpon>creddataDataSetRepeatSplitTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetRepeatTransactions.xsc">
+      <DependentUpon>creddataDataSetRepeatTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetRepeatTransactions.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetRepeatTransactions.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetRepeatTransactions.xss">
+      <DependentUpon>creddataDataSetRepeatTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetRepFilters.xsc">
+      <DependentUpon>creddataDataSetRepFilters.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetRepFilters.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetRepFilters.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetRepFilters.xss">
+      <DependentUpon>creddataDataSetRepFilters.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetSplitTransactions.xsc">
+      <DependentUpon>creddataDataSetSplitTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetSplitTransactions.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetSplitTransactions.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetSplitTransactions.xss">
+      <DependentUpon>creddataDataSetSplitTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetSubCategories.xsc">
+      <DependentUpon>creddataDataSetSubCategories.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetSubCategories.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetSubCategories.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetSubCategories.xss">
+      <DependentUpon>creddataDataSetSubCategories.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetTransactions.xsc">
+      <DependentUpon>creddataDataSetTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetTransactions.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetTransactions.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetTransactions.xss">
+      <DependentUpon>creddataDataSetTransactions.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetTransFilters.xsc">
+      <DependentUpon>creddataDataSetTransFilters.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetTransFilters.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetTransFilters.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetTransFilters.xss">
+      <DependentUpon>creddataDataSetTransFilters.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetUserSettings.xsc">
+      <DependentUpon>creddataDataSetUserSettings.xsd</DependentUpon>
+    </None>
+    <None Include="creddataDataSetUserSettings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creddataDataSetUserSettings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creddataDataSetUserSettings.xss">
+      <DependentUpon>creddataDataSetUserSettings.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
